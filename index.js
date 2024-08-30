@@ -5,5 +5,19 @@ addBtn.addEventListener("click", () => {
   const inputValue = document.querySelector("#input");
 
   const todoValue = inputValue.value;
-  console.log(todoValue);
+  //   console.log(todoValue);
+  const toDoList = document.querySelector("#Add-to-do-list");
+
+  const todoLi = document.createElement("li");
+  todoLi.textContent = todoValue;
+
+  const editBtn = document.createElement("button");
+  editBtn.textContent = `Edit`;
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = `Delete`;
+
+  todoLi.appendChild(editBtn);
+  todoLi.appendChild(deleteBtn);
+  toDoList.appendChild(todoLi);
 });
