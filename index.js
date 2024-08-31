@@ -107,20 +107,20 @@ saveBtn.addEventListener("click", () => {
   if (currentTodoLi) {
     currentTodoLi.querySelector("span").textContent = editInput.value;
   }
-  closeModalWithAnimation();
+  closeModalAnimation();
 });
 
 closeModal.addEventListener("click", () => {
-  closeModalWithAnimation();
+  closeModalAnimation();
 });
 
 window.addEventListener("click", (event) => {
   if (event.target === editModal) {
-    closeModalWithAnimation();
+    closeModalAnimation();
   }
 });
 
-function closeModalWithAnimation() {
+function closeModalAnimation() {
   editModal.classList.add("animate-slide-up");
   setTimeout(() => {
     editModal.classList.add("hidden");
